@@ -39,4 +39,10 @@ public class FizzBuzzWhizzTest {
         FizzBuzzWhizz fizzBuzzWhizz = new FizzBuzzWhizz(7);
         assertEquals("Whizz", fizzBuzzWhizz.say());
     }
+
+    @Test
+    public void should_return_FizzBuzz_when_say_given_input_is_3x_5x() {
+        FizzBuzzWhizz fizzBuzzWhizz = new FizzBuzzWhizz(15);
+        assertEquals("FizzBuzz", fizzBuzzWhizz.say());
+    }
 }

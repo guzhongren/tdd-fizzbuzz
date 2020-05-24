@@ -14,6 +14,7 @@ public class FizzBuzzWhizz {
     }
 
     public String say() {
+        if(isDividedBy(3) && isDividedBy(5)) return this.FIZZ + this.BUZZ;
         if(isDividedBy(7)) return this.WHIZZ;
         if(isDividedBy(5)) return this.BUZZ;
         if(isDividedBy(3)) return this.FIZZ;
