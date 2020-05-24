@@ -30,6 +30,9 @@ given: 5x
 when: say
 then: Buzz
 
+given: 7x 
+when: say
+then: Whizz
 
 given: 5x &3x
 when: say
