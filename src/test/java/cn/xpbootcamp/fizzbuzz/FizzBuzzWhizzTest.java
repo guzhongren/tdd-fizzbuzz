@@ -16,4 +16,9 @@ public class FizzBuzzWhizzTest {
         FizzBuzzWhizz fizzBuzzWhizz = new FizzBuzzWhizz(1);
         assertEquals("1", fizzBuzzWhizz.say());
     }
+    @Test
+    public void should_return_2_when_say_given_input_is_2() {
+        FizzBuzzWhizz fizzBuzzWhizz = new FizzBuzzWhizz(2);
+        assertEquals("2", fizzBuzzWhizz.say());
+    }
 }
