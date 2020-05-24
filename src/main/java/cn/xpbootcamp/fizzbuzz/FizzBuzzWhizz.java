@@ -13,8 +13,12 @@ public class FizzBuzzWhizz {
     }
 
     public String say() {
-        if(this.num % 5 == 0) return this.BUZZ;
-        if(this.num % 3 == 0) return this.FIZZ;
+        if(isDividedBy(5)) return this.BUZZ;
+        if(isDividedBy(3)) return this.FIZZ;
         return valueOf(this.num);
+    }
+
+    private boolean isDividedBy(int i) {
+        return this.num % i == 0;
     }
 }
