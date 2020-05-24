@@ -27,4 +27,10 @@ public class FizzBuzzWhizzTest {
         FizzBuzzWhizz fizzBuzzWhizz = new FizzBuzzWhizz(3);
         assertEquals("Fizz", fizzBuzzWhizz.say());
     }
+
+    @Test
+    public void should_return_Buzz_when_say_given_input_is_5x() {
+        FizzBuzzWhizz fizzBuzzWhizz = new FizzBuzzWhizz(5);
+        assertEquals("Buzz", fizzBuzzWhizz.say());
+    }
 }
