@@ -9,6 +9,7 @@ public class FizzBuzzWhizz {
     }
 
     public String say() {
+        if(this.num % 3 == 0) return "Fizz";
         return valueOf(this.num);
     }
 }

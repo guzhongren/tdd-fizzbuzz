@@ -21,4 +21,10 @@ public class FizzBuzzWhizzTest {
         FizzBuzzWhizz fizzBuzzWhizz = new FizzBuzzWhizz(input);
         assertEquals(expect, fizzBuzzWhizz.say());
     }
+
+    @Test
+    public void should_return_Fizz_when_say_given_input_is_3x() {
+        FizzBuzzWhizz fizzBuzzWhizz = new FizzBuzzWhizz(3);
+        assertEquals("Fizz", fizzBuzzWhizz.say());
+    }
 }
