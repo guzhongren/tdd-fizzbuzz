@@ -1,6 +1,8 @@
 package cn.xpbootcamp.fizzbuzz;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -10,15 +12,13 @@ public class FizzBuzzWhizzTest {
     public void canRunTest() {
         assertEquals(42,42);
     }
-
-    @Test
-    public void should_return_1_when_say_given_input_is_1() {
-        FizzBuzzWhizz fizzBuzzWhizz = new FizzBuzzWhizz(1);
-        assertEquals("1", fizzBuzzWhizz.say());
-    }
-    @Test
-    public void should_return_2_when_say_given_input_is_2() {
-        FizzBuzzWhizz fizzBuzzWhizz = new FizzBuzzWhizz(2);
-        assertEquals("2", fizzBuzzWhizz.say());
+    @ParameterizedTest(name="should_return_{1}_when_say_given_input_is_{0}")
+    @CsvSource({
+            "1, 1",
+            "2,2"
+    })
+    public void FizzBuzzWhizzTestForNormal(int input, String expect) {
+        FizzBuzzWhizz fizzBuzzWhizz = new FizzBuzzWhizz(input);
+        assertEquals(expect, fizzBuzzWhizz.say());
     }
 }
